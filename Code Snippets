@@ -1,7 +1,17 @@
 Import Statements
 _____________________________________
+Import Statements
+-----------------
 import javax.swing.*;
 import java.awt.event.*;;
 import java.text.DecimalFormat;
 import java.io.*;
 _____________________________________
+Create image 
+-----------------
+Icon bug2 = new ImageIcon ("C:\\Users\\ditomam\\IdeaProjects\\firstGui\\images\\grogu.jpg");
+Image newbug2 = ((ImageIcon) bug2).getImage().getScaledInstance(40,40, java.awt.Image.SCALE_SMOOTH);
+bug2=new ImageIcon(newbug2);
+_____________________________________
+
+-----------------
