@@ -1,3 +1,8 @@
+_________________________________________________________________________________________________________________________________________________________________________________________
+GENERAL
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+_____________________________________
 Import Statements
 _____________________________________
 Import Statements
@@ -12,6 +17,19 @@ Create image
 Icon bug2 = new ImageIcon ("C:\\Users\\ditomam\\IdeaProjects\\firstGui\\images\\grogu.jpg");
 Image newbug2 = ((ImageIcon) bug2).getImage().getScaledInstance(40,40, java.awt.Image.SCALE_SMOOTH);
 bug2=new ImageIcon(newbug2);
+_____________________________________
+
+
+
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+MENUS
+_________________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
 _____________________________________
 Create menu bar 
 -----------------
@@ -33,3 +51,76 @@ _____________________________________
 Add a separator line
 -----------------
 menu.addSeparator()
+_____________________________________
+Create a radio button menu and add to menu
+-----------------
+rbMenuItem =newJRadioButtonMenuItem("A radio buttonmenu item");
+menu.add(rbMenuItem);
+_____________________________________
+Create a check box menu and add to menu
+-----------------
+cbMenuItem =newJCheckBoxMenuItem("A check box menuitem");
+menu.add(cbMenuItem);
+_____________________________________
+Add a mnemonic for keyboard selection of item
+-----------------
+menuItem.setMnemonic(KeyEvent.VK_D);
+_____________________________________
+Layout for Menu
+-----------------
+menuBar.setLayout(newBoxLayout(menuBar,BoxLayout.PAGE_AXIS))
+_____________________________________
+Border Type for Menu Bar
+-----------------
+menuBar.setBorder(BorderFactory.createMatteBorder(0,0,0,1,Color.BLACK));
+_____________________________________
+Creating a horizontal menu
+-----------------
+JMenuBar menuBar =newJMenuBar();
+menuBar.setLayout(newBoxLayout(menuBar,BoxLayout.PAGE_AXIS));
+menuBar.add(createMenu("Menu 1"));
+menuBar.add(createMenu("Menu 2"));
+menuBar.add(createMenu("Menu 3"));
+menuBar.setBorder(BorderFactory.createMatteBorder(0,0,0,1,Color.BLACK));
+JMenu m =newHorizontalMenu(title);
+m.add("Menu item #1 in "+ title);
+m.add("Menu item #2 in "+ title);
+m.add("Menu item #3 in "+ title);
+JMenu submenu =newHorizontalMenu("Submenu");
+submenu.add("Submenu item #1");
+submenu.add("Submenu item #2");
+m.add(submenu);
+_____________________________________
+
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+EVENTS
+_________________________________________________________________________________________________________________________________________________________________________________________
+action listener
+-----------------
+menuItem.addActionListener(this);
+_____________________________________
+Event handler
+-----------------
+public voidactionPerformed(ActionEvent e) {
+JMenuItem source = (JMenuItem)(e.getSource());
+String s ="Action event detected."
+  +newline
+  +"    Event source: " + source.getText()
+  +" (an instance of "+ getClassName(source)+")";
+output.append(s +newline); 
+output.setCaretPosition(output.getDocument().getLength());
+}
+_____________________________________
+Change in state
+-----------------
+public voiditemStateChanged(ItemEvent e) {
+JMenuItem source = (JMenuItem)(e.getSource());
+String s ="Item event detected."
++newline
+  +"    Event source: "+ source.getText()
+  +" (an instance of "+ getClassName(source)+")"
+  +newline
+  +"    New state: "
+_____________________________________
