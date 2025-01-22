@@ -13,5 +13,23 @@ Icon bug2 = new ImageIcon ("C:\\Users\\ditomam\\IdeaProjects\\firstGui\\images\\
 Image newbug2 = ((ImageIcon) bug2).getImage().getScaledInstance(40,40, java.awt.Image.SCALE_SMOOTH);
 bug2=new ImageIcon(newbug2);
 _____________________________________
-
+Create menu bar 
 -----------------
+menuBar=newJMenuBar()
+_____________________________________
+Create Menu
+-----------------
+menu =newJMenu("A Menu");
+_____________________________________
+add menu to menu bar
+-----------------
+menuBar.add(menu)
+_____________________________________
+Create and add menuitem to the menu
+-----------------
+menumenuItem=newJMenuItem("A text-only menu item",KeyEvent.VK_T);
+menu.add(menuItem);
+_____________________________________
+Add a separator line
+-----------------
+menu.addSeparator()
